@@ -7,7 +7,7 @@ export default function PageLoader({ children }: { children: React.ReactNode }) 
 
   useEffect(() => {
     // Simulate page load — adjust delay as needed
-    const timer = setTimeout(() => setLoading(false), 3000);
+    const timer = setTimeout(() => setLoading(false), 4000);
     return () => clearTimeout(timer);
   }, []);
 
