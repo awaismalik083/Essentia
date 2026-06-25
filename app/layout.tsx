@@ -1,5 +1,6 @@
+
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "./components/SmoothScroll";
 import { MyProvider } from "./context/Context";
@@ -18,12 +19,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
-    <html lang="en" className={`${geistSans.variable}  h-full antialiased`}>
+    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-          <MyProvider>
-            <SmoothScroll>{children}</SmoothScroll>
-          </MyProvider>
+        <MyProvider>
+           <SmoothScroll>{children}</SmoothScroll>
+        </MyProvider>
       </body>
     </html>
   );
